@@ -1,0 +1,32 @@
+<header role="banner" id="fh5co-header">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="fh5co-navbar-brand">
+                        <a class="fh5co-logo" href="/">Narrow</a>
+                    </div>
+                </div>
+                <div class="col-md-9 main-nav">
+                    <ul id="ul" class="nav text-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="services">Services</a></li>
+                        <li><a href="product">Products</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</header>
+
+<script>
+    var url = window.location.href;
+    console.log(url)
+    var ul = document.getElementById("ul");
+    const lis = ul.querySelectorAll("li");
+  for (let i = 0; i < lis.length; i++) {
+    if (lis[i].children[0].href == window.location.href)
+      lis[i].classList.add("active");
+  }
+</script>
